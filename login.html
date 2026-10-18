@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NovaMart</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <main class="login-container">
+
+        <!-- LOGO SPACE: APNA NOVAMART LOGO YAHAN LAGAO -->
+        <a href="index.html" class="login-logo">
+            <img src="images/Novamart Gold Orbit Logo.png"
+                 alt="NovaMart Logo">
+        </a>
+
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Log in to your NovaMart account</p>
+
+        <form id="loginForm">
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   placeholder="Enter your password" required>
+
+            <button type="submit">Log In →</button>
+        </form>
+
+        <p class="bottom-text">
+            Don't have an account?
+            <a href="signup.html">Create Account</a>
+        </p>
+
+        <a href="index.html" class="home-link">
+            ← Back to Home
+        </a>
+
+    </main>
+
+    <!-- DEMO LOGIN: REAL AUTHENTICATION ABHI CONNECT NAHI HAI -->
+    <script>
+        document.getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                alert("Demo login only. Real account verification is not connected.");
+
+                // Login successful hone par home page redirect
+                // Real authentication ke baad hi is redirect ko use karein.
+            });
+    </script>
+
+</body>
+</html>

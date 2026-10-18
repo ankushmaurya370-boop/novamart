@@ -1,0 +1,456 @@
+
+/* =================================
+   NOVAMART PREMIUM SIGN UP PAGE
+   ================================= */
+
+:root {
+    --gold: #bd8b2c;
+    --gold-light: #e7c574;
+    --dark: #211b14;
+    --muted: #82796d;
+    --cream: #fff8ec;
+    --white: #ffffff;
+    --border: #e9e1d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--dark);
+    background: #fffdf9;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.signup-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+/* LEFT BRANDING PANEL */
+
+.signup-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 42px 8%;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(231, 197, 116, 0.23),
+            transparent 35%
+        ),
+        linear-gradient(145deg, #fff4df, #f6e8d0);
+}
+
+.signup-brand::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: -150px;
+    top: 25%;
+    border: 1px solid rgba(189, 139, 44, 0.22);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(189, 139, 44, 0.035),
+        0 0 0 70px rgba(189, 139, 44, 0.025);
+    pointer-events: none;
+}
+
+/* LOGO SPACE — APNA LOGO YAHAN DIKHEGA */
+
+.brand-logo {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.brand-logo img {
+    display: block;
+    width: 155px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 55px 0;
+}
+
+.eyebrow,
+.form-eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.brand-content h1 {
+    margin: 20px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4.4vw, 66px);
+    font-weight: 500;
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.brand-content h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.brand-content > p {
+    max-width: 370px;
+    color: #716657;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.brand-points {
+    display: grid;
+    gap: 17px;
+    margin-top: 35px;
+    color: #554a3b;
+    font-size: 13px;
+}
+
+.brand-points div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-points div:first-letter {
+    color: var(--gold);
+}
+
+.brand-bottom {
+    position: relative;
+    z-index: 1;
+    color: #928574;
+    font-size: 11px;
+}
+
+/* RIGHT SIGN UP AREA */
+
+.signup-form-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 7% 45px;
+    background: #fffdf9;
+}
+
+.signup-top {
+    position: absolute;
+    top: 35px;
+    right: 7%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.login-link {
+    padding: 10px 18px;
+    border: 1px solid #dfc58f;
+    border-radius: 30px;
+    color: var(--gold);
+    font-weight: 700;
+    transition: background 0.25s, color 0.25s;
+}
+
+.login-link:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 15px 0;
+    animation: signup-appear 0.65s ease both;
+}
+
+@keyframes signup-appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.signup-card h2 {
+    margin-top: 12px;
+    font-size: clamp(28px, 3vw, 35px);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.form-description {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FORM INPUTS */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #393127;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    height: 49px;
+    padding: 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 13px;
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
+}
+
+.form-group input::placeholder {
+    color: #aaa194;
+}
+
+.form-group input:hover {
+    border-color: #d5c19a;
+}
+
+.form-group input:focus {
+    border-color: var(--gold);
+    background: #fffefa;
+    box-shadow: 0 0 0 4px rgba(189, 139, 44, 0.10);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #948879;
+    font-size: 10px;
+}
+
+/* TERMS CHECKBOX */
+
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 5px 0 23px;
+    color: #777064;
+    font-size: 11px;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.terms-row input {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    accent-color: var(--gold);
+}
+
+.terms-row a,
+.login-bottom a {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.terms-row a:hover,
+.login-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* CREATE ACCOUNT BUTTON */
+
+.signup-button {
+    width: 100%;
+    min-height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--dark);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition:
+        background 0.25s,
+        box-shadow 0.25s,
+        transform 0.25s;
+}
+
+.signup-button span {
+    color: var(--gold-light);
+    font-size: 19px;
+    transition: transform 0.25s;
+}
+
+.signup-button:hover {
+    background: #3a2d1d;
+    box-shadow: 0 9px 22px rgba(33, 27, 20, 0.14);
+    transform: translateY(-2px);
+}
+
+.signup-button:hover span {
+    transform: translateX(4px);
+}
+
+/* DIVIDER AND LOGIN LINK */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 27px 0;
+    color: #a69b8b;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #eee6da;
+}
+
+.login-bottom {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.login-bottom a {
+    margin-left: 4px;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+    .signup-page {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .signup-brand {
+        padding: 35px 7%;
+    }
+
+    .brand-content h1 {
+        font-size: 43px;
+    }
+
+    .signup-form-section {
+        padding-inline: 8%;
+    }
+}
+
+@media (max-width: 650px) {
+    .signup-page {
+        display: block;
+    }
+
+    .signup-brand {
+        display: none;
+    }
+
+    .signup-form-section {
+        min-height: 100vh;
+        padding: 85px 22px 35px;
+    }
+
+    .signup-top {
+        top: 22px;
+        right: 22px;
+    }
+
+    .signup-card {
+        max-width: 420px;
+        margin: auto;
+    }
+
+    /* MOBILE LOGO SPACE — APNA LOGO YAHAN DIKHEGA */
+    .mobile-logo {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .mobile-logo img {
+        display: block;
+        width: 130px;
+        max-height: 65px;
+        object-fit: contain;
+    }
+
+    .signup-card h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .signup-form-section {
+        padding-inline: 17px;
+    }
+
+    .signup-top {
+        gap: 8px;
+        font-size: 11px;
+    }
+
+    .login-link {
+        padding: 8px 13px;
+    }
+}
