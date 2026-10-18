@@ -1,0 +1,912 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== NOVAMART PREMIUM NAVBAR ========== */
+
+.nova-header {
+    --nova-gold: #bd8b2c;
+    --nova-gold-light: #e7c574;
+    --nova-ink: #211b14;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(255, 249, 239, 0.96);
+    border-bottom: 1px solid rgba(189, 139, 44, 0.22);
+    box-shadow: 0 5px 24px rgba(40, 28, 10, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.nova-navbar {
+    width: min(1440px, 100%);
+    min-height: 104px;
+    margin: auto;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+/* LOGO SPACE — APNA LOGO YAHAN DIKHEGA */
+
+.nova-logo {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.nova-logo img {
+    display: block;
+    width: 145px;
+    max-height: 72px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.nova-logo:hover img {
+    transform: scale(1.04);
+}
+
+/* SEARCH BAR */
+
+.nova-search {
+    flex: 1 1 260px;
+    max-width: 370px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #e6ddce;
+    border-radius: 50px;
+    box-shadow: 0 3px 12px rgba(33, 27, 20, 0.035);
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.nova-search:focus-within {
+    border-color: var(--nova-gold);
+    box-shadow: 0 0 0 4px rgba(189, 139, 44, 0.12);
+    transform: translateY(-1px);
+}
+
+.nova-search input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--nova-ink);
+    font: inherit;
+    font-size: 13px;
+}
+
+.nova-search input::placeholder {
+    color: #9b9488;
+}
+
+.nova-search button {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--nova-ink);
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.25s ease;
+}
+
+.nova-search button:hover {
+    background: var(--nova-gold);
+    transform: rotate(-8deg);
+}
+
+.nova-search button svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+}
+
+/* NAVIGATION LINKS */
+
+.nova-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(15px, 2vw, 30px);
+}
+
+.nova-nav-link {
+    position: relative;
+    padding: 10px 0;
+    color: #393127;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.65px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.nova-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background: var(--nova-gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nova-nav-link:hover,
+.nova-nav-link.active {
+    color: var(--nova-gold);
+}
+
+.nova-nav-link:hover::after,
+.nova-nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* MOBILE MENU BUTTON */
+
+.nova-menu-toggle {
+    display: none;
+}
+
+.nova-menu-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #e6ddce;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.nova-menu-btn span {
+    width: 19px;
+    height: 2px;
+    background: var(--nova-ink);
+    border-radius: 5px;
+    transition: transform 0.25s ease;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .nova-navbar {
+        gap: 20px;
+        padding-inline: 3%;
+    }
+
+    .nova-logo {
+        flex-basis: 120px;
+    }
+
+    .nova-logo img {
+        width: 120px;
+    }
+
+    .nova-search {
+        max-width: 290px;
+    }
+
+    .nova-nav {
+        gap: 15px;
+    }
+
+    .nova-nav-link {
+        font-size: 11px;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+    .nova-navbar {
+        min-height: 80px;
+        padding: 14px 5%;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nova-logo {
+        flex: 1 1 auto;
+    }
+
+    .nova-logo img {
+        width: 120px;
+        max-height: 55px;
+    }
+
+    .nova-menu-btn {
+        display: flex;
+        order: 2;
+    }
+
+    .nova-search {
+        order: 3;
+        flex: 1 1 100%;
+        max-width: none;
+        height: 43px;
+    }
+
+    .nova-nav {
+        order: 4;
+        display: none;
+        flex: 1 1 100%;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 14px;
+        background: #fffdf9;
+        border: 1px solid #eee3d0;
+        border-radius: 16px;
+    }
+
+    .nova-nav-link {
+        padding: 14px 5px;
+        font-size: 12px;
+        border-bottom: 1px solid #f0e9de;
+    }
+
+    .nova-nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nova-nav-link::after {
+        display: none;
+    }
+
+    .nova-menu-toggle:checked ~ .nova-nav {
+        display: flex;
+    }
+
+    .nova-menu-toggle:checked + .nova-menu-btn span:first-child {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nova-menu-toggle:checked + .nova-menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nova-menu-toggle:checked + .nova-menu-btn span:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+    .nova-navbar {
+        gap: 9px;
+    }
+
+    .nova-logo img {
+        width: 105px;
+    }
+
+    .nova-menu-btn {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8fa;
+    color: #222;
+}
+
+.products-section {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 24px;
+}
+
+/* Section heading */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.view-all {
+    color: #6c35a5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Product card */
+.product-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+/* Product image */
+.product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+/* Discount badge */
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    background: #d4a017;
+    color: #fff;
+    padding: 6px 9px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Wishlist button */
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.wishlist:hover {
+    color: #e53950;
+}
+
+/* Product information */
+.product-info {
+    padding: 16px;
+}
+
+.product-category {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    color: #e4a400;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.product-rating span {
+    color: #888;
+    font-size: 11px;
+}
+
+/* Price */
+.product-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 16px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.old-price {
+    color: #999;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+/* Add to cart button */
+.cart-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4a017;
+    border-radius: 7px;
+    background: #d4a017;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.cart-btn:hover {
+    background: #fff;
+    color: #a77d08;
+}
+
+/* Tablet: 3 columns */
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+}
+
+/* Mobile and small tablets: 2 columns */
+@media (max-width: 700px) {
+    .products-section {
+        padding: 28px 16px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .current-price {
+        font-size: 17px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 380px) {
+    .products-section {
+        padding: 22px 10px;
+    }
+
+    .product-grid {
+        gap: 10px;
+    }
+
+    .product-image {
+        height: 155px;
+    }
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .product-rating span {
+        font-size: 10px;
+    }
+
+    .cart-btn {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+/* =========================
+   NOVAMART PREMIUM FOOTER
+========================= */
+
+.nova-footer {
+    --footer-bg: #101014;
+    --footer-text: #a5a5af;
+    --footer-white: #f7f7f9;
+    --footer-gold: #e4b84c;
+
+    background: var(--footer-bg);
+    color: var(--footer-white);
+    padding: 55px 7% 22px;
+    font-family: Arial, sans-serif;
+}
+
+/* Newsletter */
+
+.footer-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 45px;
+}
+
+.newsletter-label {
+    color: var(--footer-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.newsletter-content h2 {
+    font-size: clamp(22px, 3vw, 32px);
+    margin: 12px 0;
+    line-height: 1.3;
+}
+
+.newsletter-content p {
+    color: var(--footer-text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.newsletter-form {
+    display: flex;
+    width: min(100%, 430px);
+    min-width: 0;
+    border: 1px solid #3a3a43;
+    border-radius: 7px;
+    padding: 5px;
+    background: #19191f;
+}
+
+.newsletter-form input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    padding: 13px 12px;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.newsletter-form input::placeholder {
+    color: #888894;
+}
+
+.newsletter-form:focus-within {
+    border-color: var(--footer-gold);
+}
+
+.newsletter-form button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 5px;
+    background: var(--footer-gold);
+    color: #17130a;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.25s ease;
+}
+
+.newsletter-form button:hover {
+    background: #f4d47e;
+}
+
+.newsletter-form button span {
+    margin-left: 5px;
+}
+
+/* Dividers */
+
+.footer-divider {
+    height: 1px;
+    background: #2b2b32;
+}
+
+/* Main Footer */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr;
+    gap: 45px;
+    padding: 45px 0;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--footer-white);
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.footer-logo span {
+    color: var(--footer-gold);
+}
+
+.footer-logo i {
+    color: var(--footer-gold);
+    font-style: normal;
+}
+
+.brand-description {
+    max-width: 290px;
+    margin: 18px 0 22px;
+    color: var(--footer-text);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Social Icons */
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #393941;
+    border-radius: 50%;
+    color: #e6e6eb;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.footer-socials a:hover {
+    color: #111;
+    background: var(--footer-gold);
+    border-color: var(--footer-gold);
+    transform: translateY(-3px);
+}
+
+/* Footer Columns */
+
+.footer-column h3 {
+    margin: 7px 0 23px;
+    color: var(--footer-white);
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    color: var(--footer-text);
+    font-size: 13px;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--footer-gold);
+}
+
+/* Bottom Footer */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 22px;
+}
+
+.copyright {
+    color: #898993;
+    font-size: 12px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.payment-methods span {
+    padding: 6px 9px;
+    border: 1px solid #393941;
+    border-radius: 4px;
+    color: #d7d7de;
+    background: #19191f;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.back-to-top {
+    color: var(--footer-gold);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    color: white;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .nova-footer {
+        padding: 45px 5% 22px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .footer-newsletter {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+    .nova-footer {
+        padding: 35px 20px 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+        padding: 32px 0;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-column h3 {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-content p {
+        font-size: 13px;
+    }
+
+    .newsletter-form button {
+        padding: 11px;
+        font-size: 12px;
+    }
+
+    .newsletter-form input {
+        font-size: 12px;
+        padding: 10px 7px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+

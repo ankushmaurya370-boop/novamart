@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>novamart</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+    
+        
+<!-- ========== NOVAMART PREMIUM NAVBAR START ========== -->
+<header class="nova-header">
+    <div class="nova-navbar">
+
+        <!-- LOGO SPACE: YAHAN APNA NOVAMART LOGO LAGANA HAI -->
+        <a href="#" class="nova-logo">
+            <!-- Apne logo ki file ka path yahan likho -->
+            <!-- Example: images/novamart-logo.png -->
+            <img src="assets/logo/Novamart Gold Orbit Logo.png"
+                 alt="NovaMart Logo">
+        </a>
+
+        <!-- MOBILE MENU CHECKBOX -->
+        <input type="checkbox" id="nova-menu-toggle"
+               class="nova-menu-toggle">
+
+        <label for="nova-menu-toggle" class="nova-menu-btn"
+               aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- SEARCH BAR -->
+        <form class="nova-search" action="#" role="search">
+            <input type="search"
+                   placeholder="Search products, brands..."
+                   aria-label="Search products">
+
+            <button type="submit" aria-label="Search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                    <path d="m16 16 5 5"></path>
+                </svg>
+            </button>
+        </form>
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="nova-nav" aria-label="Main navigation">
+            <a href="#" class="nova-nav-link active">Home</a>
+            <a href="#products" class="nova-nav-link">Products</a>
+            <a href="#categories" class="nova-nav-link">Categories</a>
+            <a href="#contact" class="nova-nav-link">Contact</a>
+            <a href="#help" class="nova-nav-link">Help</a>
+        </nav>
+
+    </div>
+</header>
+<!-- ========== NOVAMART PREMIUM NAVBAR END ========== -->
+
+<main>
+    <section class="products-section">
+
+    <div class="section-heading">
+        <div>
+            <h2>Trending Products</h2>
+            <p>Discover our latest collections</p>
+        </div>
+        <a href="#" class="view-all">View All &rarr;</a>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <article class="product-card">
+            <div class="product-image">
+                <span class="discount-badge">-25%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                <img src="assets/product image/Premium Casual Sneakers.avif" alt="Premium Casual Sneakers">
+            </div>
+            <div class="product-info">
+                <p class="product-category">MEN'S FASHION</p>
+                <h3>Premium Casual Sneakers</h3>
+                <div class="product-rating">★★★★★ <span>(124 reviews)</span></div>
+                <div class="product-price">
+                    <span class="current-price">₹1,499</span>
+                    <span class="old-price">₹1,999</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+            <div class="product-image">
+                <span class="discount-badge">-20%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                <img src="assets/product image/Classic Wrist Watch.avif" alt="Classic Wrist Watch">
+            </div>
+            <div class="product-info">
+                <p class="product-category">ACCESSORIES</p>
+                <h3>Classic Wrist Watch</h3>
+                <div class="product-rating">★★★★★ <span>(89 reviews)</span></div>
+                <div class="product-price">
+                    <span class="current-price">₹1,599</span>
+                    <span class="old-price">₹1,999</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+            <div class="product-image">
+                <span class="discount-badge">-30%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                <img src="assets/product image/Casual Cotton T-Shirt.webp" alt="Casual Cotton T-Shirt">
+            </div>
+            <div class="product-info">
+                <p class="product-category">MEN'S CLOTHING</p>
+                <h3>Casual Cotton T-Shirt</h3>
+                <div class="product-rating">★★★★★ <span>(156 reviews)</span></div>
+                <div class="product-price">
+                    <span class="current-price">₹699</span>
+                    <span class="old-price">₹999</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card">
+            <div class="product-image">
+                <span class="discount-badge">-15%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+                <img src="assets/product image/Premium Travel Backpack.webp" alt="Premium Travel Backpack">
+            </div>
+            <div class="product-info">
+                <p class="product-category">BAGS & TRAVEL</p>
+                <h3>Premium Travel Backpack</h3>
+                <div class="product-rating">★★★★★ <span>(72 reviews)</span></div>
+                <div class="product-price">
+                    <span class="current-price">₹1,699</span>
+                    <span class="old-price">₹1,999</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+</main>
+    
+        
+<footer class="nova-footer">
+
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter">
+        <div class="newsletter-content">
+            <span class="newsletter-label">STAY IN THE LOOP</span>
+            <h2>Get 10% Off Your First Order</h2>
+            <p>Subscribe to discover new arrivals, exclusive offers and more.</p>
+        </div>
+
+        <form class="newsletter-form">
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required
+            >
+            <button type="submit">Subscribe <span>→</span></button>
+        </form>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Main Footer -->
+    <div class="footer-main">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <a href="#" class="footer-logo">
+                NOVA<span>MART</span><i>.</i>
+            </a>
+
+            <p class="brand-description">
+                Discover your style with NovaMart.
+                Premium picks, everyday essentials
+                and a better shopping experience.
+            </p>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">ig</a>
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="YouTube">yt</a>
+                <a href="#" aria-label="X">𝕏</a>
+            </div>
+        </div>
+
+        <!-- Shop Links -->
+        <div class="footer-column">
+            <h3>SHOP</h3>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Men's Fashion</a></li>
+                <li><a href="#">Women's Fashion</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Special Offers</a></li>
+            </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-column">
+            <h3>HELP & SUPPORT</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping Information</a></li>
+                <li><a href="#">Track Your Order</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>ABOUT NOVAMART</h3>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <p class="copyright">
+            © 2026 NovaMart. All rights reserved.
+        </p>
+
+        <div class="payment-methods">
+            <span>UPI</span>
+            <span>VISA</span>
+            <span>PayPal</span>
+            <span>Mastercard</span>
+        </div>
+
+        <a href="#top" class="back-to-top">
+            Back to top ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+   
+    <script>
+        
+const searchToggle = document.getElementById("searchToggle");
+const searchBox = document.getElementById("searchBox");
+
+searchToggle.addEventListener("click", () => {
+    searchBox.classList.toggle("active");
+
+    if (searchBox.classList.contains("active")) {
+        searchBox.querySelector("input").focus();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-container")) {
+        searchBox.classList.remove("active");
+    }
+});
+
+    </script>
+</body>
+</html>
